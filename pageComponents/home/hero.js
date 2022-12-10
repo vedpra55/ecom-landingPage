@@ -26,51 +26,31 @@ export default function Hero() {
             </div>
             <p>Топовые бренды:</p>
             <div className="flex flex-wrap sm:flex-nowrap gap-y-2 gap-x-2 lg:gap-x-5 items-center py-2">
-              <div className="border border-white rounded-md px-5">
-                <div className=" relative  w-14 h-8 md:w-16 md:h-10 3xl:w-[136px] 3xl:h-[56px]">
-                  <Image
-                    fill
-                    sizes="10vh"
-                    className="w-full h-full object-contain"
-                    alt="brands"
-                    src="/assets/brands.png"
-                  />
+              {Array.from(Array(3)).map((item, i) => (
+                <div key={i} className="border border-white rounded-md px-5">
+                  <div className=" relative  w-14 h-8 md:w-20 md:h-12 3xl:w-[136px] 3xl:h-[56px]">
+                    <Image
+                      fill
+                      sizes="10vh"
+                      className="w-full h-full object-contain"
+                      alt="brands"
+                      src="/assets/brands.png"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="border border-white rounded-md px-5">
-                <div className=" relative  w-14 h-8 md:w-16 md:h-10 3xl:w-[136px] 3xl:h-[56px]">
-                  <Image
-                    fill
-                    sizes="10vh"
-                    className="w-full h-full object-contain"
-                    alt="brands"
-                    src="/assets/brands.png"
-                  />
-                </div>
-              </div>
-              <div className="border border-white rounded-md px-5">
-                <div className=" relative  w-14 h-8 md:w-16 md:h-10 3xl:w-[136px] 3xl:h-[56px]">
-                  <Image
-                    fill
-                    sizes="10vh"
-                    className="w-full h-full object-contain"
-                    alt="brands"
-                    src="/assets/brands.png"
-                  />
-                </div>
-              </div>
+              ))}
               <div className="border border-main text-main rounded-full p-2">
                 <AiOutlineRight />
               </div>
             </div>
-            <button className="border  lg:w-[289px] lg:h-[52px] border-main text-white px-10 mt-4 3xl:py-2 rounded-[90px]">
+            <button className="border  lg:w-[289px] lg:h-[52px] border-main text-white px-10 mt-4 py-2 rounded-[90px]">
               <p className=" font-medium whitespace-nowrap ">
                 Рассчитатьс стоимость
               </p>
             </button>
           </div>
           <div className="flex flex-col text-center  justify-center gap-y-5 text-xl bg-black py-10 3xl:h-[362px] 3xl:py-14 w-full md:w-80 lg:w-96 3xl:w-[436px] px-10 rounded-xl items-center border border-[#636679]">
-            <h4 className=" font-semibold 3xl:text-[24px] ">
+            <h4 className=" font-semibold xl:text-[24px] ">
               Свяжитесь с нами для консультации
             </h4>
             <p className="text-xs">
