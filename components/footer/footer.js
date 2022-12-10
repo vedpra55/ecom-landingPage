@@ -6,7 +6,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="mt-[80px]">
-      <div className="bg-[#181818] w-full ">
+      <div className="bg-[#181818] w-full lg:h-[259px] flex justify-center items-center ">
         <div className="myContainer text-white py-5 gap-y-5 grid grid-cols-12 gap-x-5">
           <div className="col-span-12 sm:col-span-5 lg:col-span-3 flex flex-col items-start justify-start gap-y-2">
             <p className="font-medium text-2xl">Cанкционка</p>
@@ -78,7 +78,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex text-white text-[14px] justify-center py-4 bg-[#141414]">
+      <div className="flex h-[45px]  items-center text-white text-[14px] justify-center py-4 bg-[#141414]">
         <p>Все права защищены. 2022</p>
       </div>
     </footer>

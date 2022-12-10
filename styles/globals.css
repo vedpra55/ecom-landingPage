@@ -95,14 +95,6 @@
   border: 1px solid #ff1c74;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   background: white;
-  color: linear-gradient(
-    135deg,
-    #fae100 14.64%,
-    #fcb720 25.25%,
-    #ff7950 35.86%,
-    #ff1c74 50%,
-    #6c1cd1 85.36%
-  );
 }
 
 .btnHover:hover {

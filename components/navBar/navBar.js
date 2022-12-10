@@ -94,7 +94,7 @@ export default function NavBar() {
           <div className="hidden hover:bg-white linkHover hover:text-main cursor-pointer lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl text-white">
             <FaTelegramPlane />
           </div>
-          <div className="hidden hover:text-main insta cursor-pointer  lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl text-white">
+          <div className="hidden cursor-pointer insta hover:text-main lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl text-white">
             <BsInstagram />
           </div>
           <Link href={"/cart"}>
