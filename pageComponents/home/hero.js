@@ -10,7 +10,7 @@ export default function Hero() {
       <div className=" bg-black opacity-95 bg-hero-pattern bg-no-repeat w-full h-full md:h-[450px] xl:h-[480px] 2xl:h-[600px] bg-cover">
         <div className="myContainer text-white flex flex-col gap-y-10 md:flex-row h-full justify-between gap-x-40 lg:gap-x-56  items-start py-10 xl:py-16">
           <div className="flex flex-col items-start justify-start w-full md:w-[35%] lg:w-[40%] ">
-            <h1 className=" text-3xl lg:text-4xl font-bold pb-2">
+            <h1 className=" text-3xl lg:text-4xl 3xl:[48px] font-bold pb-2">
               Заказите товар через баера с Европы
             </h1>
             <h4 className="font-semibold">Видеоотчет о покупке Вашго товара</h4>

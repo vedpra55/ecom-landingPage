@@ -28,7 +28,7 @@ export default function InMagzine() {
             Часто задаваемые вопросы
           </button>
         </div>
-        <div className="col-span-12 lg:col-span-6 relative h-96 3xl:[556px] lg:h-full">
+        <div className="col-span-12 lg:col-span-6 relative h-96 3xl:h-[556px] lg:h-full">
           <Image
             fill
             sizes="50vh"
