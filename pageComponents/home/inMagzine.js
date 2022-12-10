@@ -6,7 +6,9 @@ export default function InMagzine() {
     <div className="mt-10 md:mt-20 xl:[115px]  myContainer">
       <div className="grid grid-cols-12 lg:gap-x-10 gap-y-5">
         <div className="col-span-12 lg:col-span-6 flex flex-col gap-y-5 justify-start items-start">
-          <p className="font-bold text-xl md:text-3xl">О нашем магазине</p>
+          <p className="font-bold text-xl md:text-3xl 3xl:text-[40px]">
+            О нашем магазине
+          </p>
           <p>
             But I must explain to you how all this mistaken idea of denouncing
             pleasure and praising pain was born and I will give you a complete
