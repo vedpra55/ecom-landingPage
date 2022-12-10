@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export default function ProductCard({ product }) {
   return (
-    <div className="shadow-lg rounded-b-lg w-full h-full pb-2">
+    <div className=" cardShadow cardHover w-full 3xl:w-[280px]  pb-2 ">
       <Link href={"/productDetails"}>
-        <div className="relative w-full h-80 rounded-t-lg">
+        <div className="relative w-full h-[390px] rounded-t-lg">
           <Image
             fill
             sizes="100vh"
@@ -33,9 +33,9 @@ export default function ProductCard({ product }) {
           <p className=" opacity-40 line-through">{product.orignalPrice}</p>
           <p className=" font-semibold">{product.dicountedPrice}</p>
         </div>
-        <button className="border   hover:bg-main hover:text-white border-main text-main flex justify-center items-center rounded-3xl gap-x-3 md:gap-x-5 py-1  px-2">
+        <button className="border  lg:mx-0  2xl:w-[228px] 2xl:h-[44px]   hover:bg-main hover:text-white border-main text-main flex justify-center items-center rounded-3xl gap-x-3 md:gap-x-[13px] py-2 px-2 md:px-4">
           <GiShoppingCart className=" md:text-xl" />
-          <p className="text-xs md:text-[14px] whitespace-nowrap">
+          <p className="text-xs text-[14px] md:text-[15px] whitespace-nowrap">
             Добавить в корзину
           </p>
         </button>

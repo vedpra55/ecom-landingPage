@@ -1,25 +1,35 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export default function ContactUs() {
+  const [isHover, setHover] = useState(null);
+
   return (
-    <div className="">
-      <div className="relative w-full h-56">
+    <div className="mt-20 lg:mt-[115px]">
+      <div className="relative w-full h-[344px]">
         <Image
           fill
           className="w-full h-full object-cover"
           alt="banner"
           src={"/assets/banner.png"}
         />
-        <div className="bannerGradient absolute inset-0 w-full  h-full">
-          <div className="myContainer text-white gap-y-2 justify-center items-start h-56 flex flex-col py-5">
-            <p className=" font-bold text-xl md:text-2xl">
+        <div className="bannerGradient  absolute inset-0 w-full  h-full">
+          <div className="myContainer text-white gap-y-2 justify-center items-start h-full flex flex-col py-5">
+            <p className=" font-bold text-xl md:text-3xl">
               Возникли проблемы с поиском ?
             </p>
             <p>Задайте вопросы менеджеру</p>
-            <button className="mt-3 rounded-3xl border border-main items-center  py-2 px-10 flex gap-x-5">
-              <div className=" bg-[#039BE5] rounded-full p-2  text-white">
+            <button
+              onMouseLeave={() => setHover(null)}
+              onMouseEnter={() => setHover(true)}
+              className="mt-3 xl:w-[271px] xl:h-[55px] hover:bg-main rounded-[90px] border border-main items-center justify-center  py-2 px-10 flex gap-x-5"
+            >
+              <div
+                className={`${
+                  isHover ? "bg-white text-main" : "text-white bg-[#039BE5]  "
+                }  rounded-full w-[30px] h-[30px] flex justify-center items-center  `}
+              >
                 <FaTelegramPlane />
               </div>
               <p>Telegram чат</p>

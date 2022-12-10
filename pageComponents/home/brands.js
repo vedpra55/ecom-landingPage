@@ -18,12 +18,14 @@ export default function Brands() {
   ];
 
   return (
-    <section className="myContainer my-10">
-      <p className=" font-bold text-2xl">Брнеды которые мы доставляем</p>
-      <div className="grid grid-cols-12 gap-5 mt-5 ">
+    <section className="myContainer mt-[50px] md:mt-[70px]">
+      <p className=" font-bold text-xl md:text-3xl">
+        Брнеды которые мы доставляем
+      </p>
+      <div className="grid grid-cols-12 gap-5 3xl:gap-x-[27px] mt-5 ">
         {data.map((item) => (
           <div
-            className="relative w-full col-span-6 md:col-span-3 lg:col-span-3 h-20 md:h-36 bg-white shadow-md rounded-lg"
+            className=" cardHover w-full  cursor-pointer cardShadow 3xl:w-[280px] 3xl:h-[130px] relative col-span-6 md:col-span-3 lg:col-span-3 h-28 md:h-36 bg-white shadow-md rounded-lg"
             key={item.imgUrl}
           >
             <Image

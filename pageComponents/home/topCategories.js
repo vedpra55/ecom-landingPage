@@ -36,7 +36,7 @@ export default function TopCategories() {
   return (
     <section className="my-10 myContainer">
       <h5 className=" font-bold text-3xl pb-5">Популярные категории</h5>
-      <div className=" grid grid-cols-12 gap-3 h-full w-full">
+      <div className=" grid grid-cols-12 gap-2 md:gap-[15px] h-full w-full">
         {data.map((item, i) => (
           <div
             key={i}
@@ -51,14 +51,14 @@ export default function TopCategories() {
                 alt={item.name}
               />
             </div>
-            <div className="z-10 absolute inset-0 py-2 md:py-5  gap-y-2 flex flex-col text-white justify-end items-start px-2 md:px-10 h-full">
-              <h5 className="font-bold lg:text-xl w-full md:w-44 leading-6 text-[18px] ">
+            <div className="z-10 absolute inset-0 py-2 md:py-5 gap-y-1 md:gap-y-[15px] flex flex-col text-white justify-end items-start px-2 md:px-[25px] h-full">
+              <h5 className="font-bold lg:text-xl w-full md:w-44 leading-6 text-xl md:text-[24px] ">
                 {item.name}
               </h5>
-              <p className=" opacity-60 text-[13px] md:text-[16px]">
+              <p className=" opacity-60 text-[13px] md:text-[18px]">
                 {item.price}
               </p>
-              <button className=" bg-main rounded-2xl py-[2px] w-full md:w-auto text-[12px] md:text-[16px] md:py-[6px]  whitespace-nowrap px-10">
+              <button className=" btnHover lg:w-[172px] lg:h-[44px] flex justify-center items-center bg-main rounded-[90px]   md:w-auto text-[15px] md:text-[16px] px-5 py-1  font-semibold  whitespace-nowrap lg:px-[52px]">
                 В каталог
               </button>
             </div>

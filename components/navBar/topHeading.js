@@ -15,21 +15,21 @@ export default function TopHeading() {
   ];
 
   return (
-    <section className={`bg-[#E4E4E4] w-full py-2`}>
-      <div className="flex justify-center md:justify-between flex-wrap md:flex-nowrap  items-center myContainer text-[14px] lg:text-[16px]">
+    <section className={`bg-[#E4E4E4] py-1 md:p-0 w-full md:h-[51px]`}>
+      <div className="w-full h-full flex justify-center md:justify-between flex-wrap md:flex-nowrap  items-center myContainer text-[14px] lg:text-[16px]">
         <div>
           <p>Какой то краткий лозунг о чем магазин</p>
         </div>
-        <div className="flex items-center gap-x-10">
+        <div className="flex items-center gap-x-[30px]">
           {data.map((item) => (
             <div
-              className="flex  items-center gap-x-2 lg:gap-x-4"
+              className="flex  items-center gap-x-2 lg:gap-x-[10px]"
               key={item.name}
             >
-              <p>{item.name}</p>
-              <div className="bg-[#636679] text-white rounded-full p-2 text-xs lg:text-[14px]">
+              <div className="w-[24px] h-[24px] flex justify-center items-center bg-[#636679] text-white rounded-full text-xs lg:text-[14px]">
                 {item.icon}
               </div>
+              <p>{item.name}</p>
             </div>
           ))}
         </div>

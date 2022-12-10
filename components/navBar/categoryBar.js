@@ -20,11 +20,11 @@ export default function CategoryBar() {
   ];
 
   return (
-    <section className="bg-[#181818] py-2">
-      <div className="flex flex-wrap md:flex-nowrap justify-between gap-x-10 md:gap-0 text-xs md:text-[16px] gap-y-1 md:justify-between items-center myContainer">
+    <section className="bg-[#181818] h-[65px]">
+      <div className="w-full h-full flex flex-wrap md:flex-nowrap justify-between gap-x-10 md:gap-0 text-xs md:text-[20px] cursor-pointer  gap-y-1 md:justify-between items-center myContainer">
         {data.map((item) => (
           <div key={item.name}>
-            <p className="text-white">{item.name}</p>
+            <p className="text-white hover:text-main">{item.name}</p>
           </div>
         ))}
       </div>

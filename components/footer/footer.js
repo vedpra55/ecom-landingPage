@@ -5,7 +5,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="mt-[80px]">
       <div className="bg-[#181818] w-full ">
         <div className="myContainer text-white py-5 gap-y-5 grid grid-cols-12 gap-x-5">
           <div className="col-span-12 sm:col-span-5 lg:col-span-3 flex flex-col items-start justify-start gap-y-2">
@@ -24,19 +24,35 @@ export default function Footer() {
             <p>FAQ</p>
           </div>
           <div className="col-span-6 md:col-span-5  flex flex-col items-start justify-start gap-y-2">
-            <p className="font-medium text-xl">Категории</p>
+            <p className="font-medium text-xl ">Категории</p>
             <div className="flex justify-between gap-x-5">
-              <div className="flex flex-col gap-y-1">
-                <p>Название категории</p>
-                <p>Название категории</p>
-                <p>Название категории</p>
-                <p>Название категории</p>
+              <div className="flex flex-col gap-y-1 ">
+                <p className="hover:text-main cursor-pointer">
+                  Название категории
+                </p>
+                <p className="hover:text-main cursor-pointer">
+                  Название категории
+                </p>
+                <p className="hover:text-main cursor-pointer">
+                  Название категории
+                </p>
+                <p className="hover:text-main cursor-pointer">
+                  Название категории
+                </p>
               </div>
               <div className="flex flex-col gap-y-1">
-                <p>Название категории</p>
-                <p>Название категории</p>
-                <p>Название категории</p>
-                <p>Название категории</p>
+                <p className="hover:text-main cursor-pointer">
+                  Название категории
+                </p>
+                <p className="hover:text-main cursor-pointer">
+                  Название категории
+                </p>
+                <p className="hover:text-main cursor-pointer">
+                  Название категории
+                </p>
+                <p className="hover:text-main cursor-pointer">
+                  Название категории
+                </p>
               </div>
             </div>
           </div>
@@ -52,10 +68,10 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex gap-x-5">
-              <div className="bg-[#039BE5] rounded-full p-2 text-2xl text-white">
+              <div className="hidden hover:bg-white linkHover hover:text-main cursor-pointer lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl text-white">
                 <FaTelegramPlane />
               </div>
-              <div className=" bg-[#039BE5] rounded-full p-2 text-2xl text-white">
+              <div className="hidden hover:text-main insta cursor-pointer  lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl text-white">
                 <BsInstagram />
               </div>
             </div>
