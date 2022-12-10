@@ -10,7 +10,7 @@ export default function Hero() {
       <div className=" bg-black opacity-95 bg-hero-pattern bg-no-repeat w-full h-full md:h-[450px] xl:h-[480px] 2xl:h-[600px] bg-cover">
         <div className="myContainer text-white flex flex-col gap-y-10 md:flex-row h-full justify-between gap-x-40 lg:gap-x-56  items-start py-10 xl:py-16">
           <div className="flex flex-col items-start justify-start w-full md:w-[35%] lg:w-[40%] ">
-            <h1 className=" text-3xl lg:text-4xl 3xl:[48px] font-bold pb-2">
+            <h1 className=" text-3xl lg:text-4xl 3xl:leading-[50px] 3xl:text-[48px] font-bold pb-2">
               Заказите товар через баера с Европы
             </h1>
             <h4 className="font-semibold">Видеоотчет о покупке Вашго товара</h4>
@@ -25,7 +25,7 @@ export default function Hero() {
             <p>Топовые бренды:</p>
             <div className="flex flex-wrap sm:flex-nowrap gap-y-2 gap-x-2 lg:gap-x-5 items-center py-2">
               <div className="border border-white rounded-md px-5">
-                <div className=" relative  w-14 h-8 md:w-16 md:h-10">
+                <div className=" relative  w-14 h-8 md:w-16 md:h-10 3xl:w-[136px] 3xl:h-[56px]">
                   <Image
                     fill
                     sizes="10vh"
@@ -36,7 +36,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="border border-white rounded-md px-5">
-                <div className=" relative  w-14 h-8 md:w-16 md:h-10">
+                <div className=" relative  w-14 h-8 md:w-16 md:h-10 3xl:w-[136px] 3xl:h-[56px]">
                   <Image
                     fill
                     sizes="10vh"
@@ -47,7 +47,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="border border-white rounded-md px-5">
-                <div className=" relative  w-14 h-8 md:w-16 md:h-10">
+                <div className=" relative  w-14 h-8 md:w-16 md:h-10 3xl:w-[136px] 3xl:h-[56px]">
                   <Image
                     fill
                     sizes="10vh"
@@ -61,13 +61,13 @@ export default function Hero() {
                 <AiOutlineRight />
               </div>
             </div>
-            <button className="border border-main text-white px-10 mt-4 py-2 rounded-2xl">
+            <button className="border w-[289px] h-[52px] border-main text-white px-10 mt-4 py-2 rounded-[90px]">
               <p className=" font-medium whitespace-nowrap ">
                 Рассчитатьс стоимость
               </p>
             </button>
           </div>
-          <div className="flex flex-col text-center  justify-center gap-y-5 text-xl bg-black py-10 w-full md:w-80 lg:w-96 px-10 rounded-xl items-center border border-[#636679]">
+          <div className="flex flex-col text-center  justify-center gap-y-5 text-xl bg-black py-10 3xl:py-14 w-full md:w-80 lg:w-96 3xl:w-[436px] px-10 rounded-xl items-center border border-[#636679]">
             <h4 className=" font-semibold  ">
               Свяжитесь с нами для консультации
             </h4>
