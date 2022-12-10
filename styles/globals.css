@@ -63,6 +63,8 @@
 }
 
 .cardShadow {
+  border: 1px dotted wheat;
+  border-color: transparent;
   box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   background: #ffffff;
