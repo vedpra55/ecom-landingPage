@@ -39,7 +39,7 @@ export default function ProductContainer({ products, title }) {
   ];
 
   return (
-    <div className="mt-[50px] ">
+    <div className="mt-[50px] lg:mt-[70px] ">
       <div className="flex justify-between items-start">
         <h5 className=" font-bold text-2xl md:text-3xl pb-5 md:pb-0">
           {title}
