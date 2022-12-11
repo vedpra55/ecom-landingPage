@@ -1,7 +1,5 @@
+import { useState } from "react";
 import { NavBar, Footer, Breadcrumbs } from "../../components";
-import { AiOutlineRight } from "react-icons/ai";
-
-import Image from "next/image";
 import OrderItemTable from "../../pageComponents/placeOrder/orderItemTable";
 import OrderItemCard from "../../pageComponents/placeOrder/orderItemCard";
 
@@ -55,6 +53,16 @@ export default function PlaceOrderPage() {
       rating: 5,
     },
   ];
+
+  const [clicked, setClicked] = useState(null);
+
+  function handleClick() {
+    setClicked(true);
+
+    setTimeout(() => {
+      setClicked(false);
+    }, 1500);
+  }
 
   return (
     <main>
@@ -115,7 +123,12 @@ export default function PlaceOrderPage() {
                 <p className="text-main font-semibold text-[24px]">1 500 Р</p>
               </div>
             </div>
-            <button className="w-full  lg:w-[305px] py-2 lg:h-[44px] whitespace-nowrap text-white rounded-3xl mt-5 bg-main">
+            <button
+              onClick={handleClick}
+              className={` ${
+                clicked ? "btnClicked" : "btnHover"
+              } w-full  lg:w-[305px] py-2 lg:h-[44px] whitespace-nowrap text-white rounded-3xl mt-5 bg-main`}
+            >
               <p className="font-semibold">Подтвердить</p>
             </button>
           </div>
