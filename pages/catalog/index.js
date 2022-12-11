@@ -1,4 +1,10 @@
-import { NavBar, Footer, ContactUs, ProductCard } from "../../components";
+import {
+  NavBar,
+  Footer,
+  ContactUs,
+  ProductCard,
+  Breadcrumbs,
+} from "../../components";
 import FilterOptions from "../../pageComponents/catalog/filterOptions";
 import { AiOutlineRight, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
@@ -142,12 +148,8 @@ export default function CatalogPage() {
   return (
     <main>
       <NavBar />
-      <section className="myContainer">
-        <div className="flex gap-x-5 mt-5 items-center ">
-          <p className="text-main underline">Главная</p>
-          <AiOutlineRight />
-          <p>Хлебные крошки</p>
-        </div>
+      <section className="myContainer mt-[20px]">
+        <Breadcrumbs text={"Хлебные крошки"} />
         {showFilter ? (
           <div className="md:hidden mt-4">
             <AiOutlineClose onClick={() => setShowFilter(false)} />
@@ -159,18 +161,17 @@ export default function CatalogPage() {
             </p>
           </div>
         )}
-        <div className="grid grid-cols-12 gap-x-5 mt-5">
+        <div className="grid grid-cols-12 gap-x-5 mt-[30px]">
           <FilterOptions showFilter={showFilter} />
-
-          <div className="col-span-12 md:col-span-8 lg:col-span-9 mb-20">
+          <div className="col-span-12 md:col-span-8 lg:col-span-9">
             <h2 className="text-3xl font-bold">Доступные товары в наличие</h2>
-            <div className="flex justify-between md:justify-start md:gap-x-5 items-center mt-5">
+            <div className="flex justify-between md:justify-start md:gap-x-[15px] items-center mt-[15px]">
               <p>Сортировать по:</p>
-              <select className="border rounded-2xl py-2 px-2 md:px-10 border-[#D9D9D9]">
+              <select className="border w-[270px] h-[45px] rounded-[90px] px-5 border-[#D9D9D9]">
                 <option className="">Сначала дешевые</option>
               </select>
             </div>
-            <div className="grid grid-cols-12 gap-x-5 gap-y-5 mt-5">
+            <div className="grid grid-cols-12 gap-x-5 gap-y-5 mt-[15px]">
               {data.map((item, i) => (
                 <div className="col-span-6 lg:col-span-4" key={i}>
                   <ProductCard product={item} />
@@ -179,7 +180,7 @@ export default function CatalogPage() {
             </div>
           </div>
         </div>
-        <div className="mb-10">
+        <div className="mb-10 mt-14 md:mt-20 lg:mt-[115px]">
           <p className="text-3xl font-bold">Похожие товары</p>
           <div className="grid grid-cols-12 mt-5 gap-x-5 gap-y-5">
             {data2.map((item, i) => (
@@ -191,7 +192,7 @@ export default function CatalogPage() {
         </div>
       </section>
       <ContactUs />
-      <Footer />
+      <Footer noMargin={true} />
     </main>
   );
 }

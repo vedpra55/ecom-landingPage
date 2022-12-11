@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function OrderItemTable({ item }) {
   return (
     <div className="hidden md:grid grid-cols-12 gap-x-5">
-      <div className="relative w-full h-36 col-span-2">
+      <div className="relative h-[125px] w-[85px] col-span-2">
         <Image
           className=" object-cover"
           fill

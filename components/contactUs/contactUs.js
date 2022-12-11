@@ -4,6 +4,14 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 export default function ContactUs() {
   const [isHover, setHover] = useState(null);
+  const [clicked, setClicked] = useState(null);
+
+  function handleClick() {
+    setClicked(true);
+    setTimeout(() => {
+      setClicked(null);
+    }, 2000);
+  }
 
   return (
     <div className="mt-20 lg:mt-[115px]">
@@ -21,13 +29,18 @@ export default function ContactUs() {
             </p>
             <p>Задайте вопросы менеджеру</p>
             <button
+              onClick={handleClick}
               onMouseLeave={() => setHover(null)}
               onMouseEnter={() => setHover(true)}
-              className="mt-3 xl:w-[271px] xl:h-[55px] hover:bg-main rounded-[90px] border border-main items-center justify-center  py-2 px-10 flex gap-x-5"
+              className={` ${
+                clicked ? "btnClicked" : "hover:bg-main "
+              } mt-3 xl:w-[271px] xl:h-[55px] rounded-[90px] border border-main items-center justify-center  py-2 px-10 flex gap-x-5`}
             >
               <div
                 className={`${
-                  isHover ? "bg-white text-main" : "text-white bg-[#039BE5]  "
+                  isHover || clicked
+                    ? "bg-white text-main"
+                    : "text-white bg-[#039BE5]  "
                 }  rounded-full w-[30px] h-[30px] flex justify-center items-center  `}
               >
                 <FaTelegramPlane />

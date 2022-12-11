@@ -1,7 +1,16 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 export default function InMagzine() {
+  const [clicked, setClicked] = useState(null);
+
+  function handleClick(i) {
+    setClicked(i);
+    setTimeout(() => {
+      setClicked(null);
+    }, 2000);
+  }
+
   return (
     <div className="mt-10 md:mt-20 xl:[115px]  myContainer">
       <div className="grid grid-cols-12 lg:gap-x-10 gap-y-5">
@@ -28,7 +37,12 @@ export default function InMagzine() {
             who chooses to enjoy a pleasure that has no annoying consequences,
             or one who avoids a pain that produces no resultant pleasure?
           </p>
-          <button className="btnHover bg-main w-[298px] h-[55px] rounded-[90px] px-10 py-2 text-white">
+          <button
+            onClick={handleClick}
+            className={` ${
+              clicked ? "btnClicked" : "btnHover bg-main"
+            }   w-[298px] h-[55px] rounded-[90px] px-10 py-2 text-white`}
+          >
             Часто задаваемые вопросы
           </button>
         </div>

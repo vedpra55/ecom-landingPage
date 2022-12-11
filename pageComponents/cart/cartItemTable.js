@@ -5,8 +5,8 @@ import { AiOutlineMinus, AiOutlinePlus, AiOutlineClose } from "react-icons/ai";
 
 export default function CartItemTable({ item }) {
   return (
-    <div className="hidden md:grid grid-cols-12 gap-x-10">
-      <div className="relative w-full h-24 col-span-1">
+    <div className="hidden md:grid grid-cols-12 gap-x-5">
+      <div className="relative w-full h-[125px] col-span-1">
         <Image
           className=" object-cover"
           fill

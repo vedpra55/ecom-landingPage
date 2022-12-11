@@ -43,10 +43,10 @@ export default function Clients() {
 
   return (
     <div className="col-span-12 md:col-span-8">
-      <h2 className="font-bold text-2xl mb-3">Клиенты</h2>
+      <h2 className="font-bold text-2xl mb-[15px]">Клиенты</h2>
       <div className="relative">
         <input
-          className="accountInput "
+          className="accountInput h-[52px]"
           placeholder="Поиск заказа"
           type="text"
         />
@@ -54,9 +54,12 @@ export default function Clients() {
           <AiOutlineSearch />
         </div>
       </div>
-      <div className=" hidden md:grid grid-cols-12 gap-x-5 mt-5">
+      <div className=" hidden md:grid grid-cols-12 gap-x-5 mt-[30px]">
         {header.map((item, i) => (
-          <div key={item.name} className={`${i === 3 && "pl-16"}  ${item.col}`}>
+          <div
+            key={item.name}
+            className={`${i === 3 && "pl-16 3xl:pl-24"}  ${item.col}`}
+          >
             <p className="text-[10px] lg:text-[13px] whitespace-nowrap font-semibold">
               {item.name}
             </p>

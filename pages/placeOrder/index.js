@@ -1,4 +1,4 @@
-import { NavBar, Footer } from "../../components";
+import { NavBar, Footer, Breadcrumbs } from "../../components";
 import { AiOutlineRight } from "react-icons/ai";
 
 import Image from "next/image";
@@ -59,30 +59,28 @@ export default function PlaceOrderPage() {
   return (
     <main>
       <NavBar />
-      <section className="myContainer">
-        <div className="flex gap-x-5 mt-5 items-center ">
-          <p className="text-main underline">Главная</p>
-          <AiOutlineRight />
-          <p>Хлебные крошки</p>
-        </div>
-        <h2 className="font-bold text-3xl mt-5">Разместить заказ</h2>
+      <section className="mt-[20px] myContainer">
+        <Breadcrumbs text={"Хлебные крошки"} />
+        <h2 className="font-bold text-3xl mt-[30px]">Разместить заказ</h2>
         <div className="grid grid-cols-12 items-start mt-5 mb-10 gap-x-5">
           <div className="col-span-12 md:col-span-8 ">
-            <p className="font-semibold mb-2 text-xl">Адрес доставки</p>
+            <p className="font-semibold mb-[10px] text-xl">Адрес доставки</p>
             <p>Имя: Текст Текст Текст Текст Адрес</p>
             <p>Телефон: Текст Текст Текст Текст Адрес</p>
             <p>Город: Текст Текст Текст Текст Адрес</p>
             <p>Индекс: Текст Текст Текст Текст Адрес</p>
             <p>Страна: Текст Текст Текст Текст Адрес</p>
-            <div className="border w-full my-5 border-[#E4E4E4]"></div>
+            <div className="border w-full my-[30px] border-[#E4E4E4]"></div>
             <p className="text-xl font-semibold">Спосос оплаты</p>
-            <p>Оплата картой на сайте</p>
+            <p className="mt-[10px]">Оплата картой на сайте</p>
             <div className="border w-full my-5 border-[#E4E4E4]"></div>
-            <p className="text-xl font-semibold mb-5 md:mb-0">Список товаров</p>
-            <div className="hidden md:grid mb-5 grid-cols-12 gap-x-5 mt-5">
+            <p className="text-xl font-semibold mb-[10px] md:mb-0">
+              Список товаров
+            </p>
+            <div className="hidden md:grid mb-5 grid-cols-12 gap-x-5 mt-[10px]">
               {header.map((item, i) => (
                 <div
-                  className={`   w-full  font-semibold text-[18px] ${item.col}`}
+                  className={`w-full  font-semibold text-[18px] ${item.col}`}
                   key={i}
                 >
                   <p>{item.name}</p>
@@ -92,32 +90,32 @@ export default function PlaceOrderPage() {
 
             {data.map((item, i) => (
               <>
-                <OrderItemTable item={item} />
-                <OrderItemCard item={item} />
+                <OrderItemTable key={i} item={item} />
+                <OrderItemCard key={i} item={item} />
               </>
             ))}
           </div>
-          <div className="col-span-12 md:col-span-4 rounded-lg px-5 py-4 bg-white myshadow">
-            <p className="text-xl font-semibold">Стоимость заказа</p>
+          <div className="col-span-12 lg:col-span-4 w-full py-5 lg:w-[350px] lg:h-[311px] rounded-lg flex flex-col justify-center px-[20px] bg-white myshadow">
+            <p className="text-[22px] font-semibold">Стоимость заказа</p>
             <div className="flex flex-col gap-y-3 pt-5">
-              <div className="flex items-center justify-between">
+              <div className="flex text-[20px] items-center justify-between">
                 <p>Товары:</p>
                 <p>4190 Р</p>
               </div>
-              <div className="flex items-center justify-between ">
+              <div className="flex text-[20px] items-center justify-between ">
                 <p>Доставка:</p>
                 <p>4190 Р</p>
               </div>
-              <div className="flex items-center justify-between ">
+              <div className="flex text-[20px] items-center justify-between ">
                 <p>Скидка 10%</p>
                 <p>4190 Р</p>
               </div>
-              <div className="flex items-center justify-between ">
+              <div className="flex text-[20px] items-center justify-between ">
                 <p>Итого</p>
-                <p className="text-main font-semibold text-xl">1 500 Р</p>
+                <p className="text-main font-semibold text-[24px]">1 500 Р</p>
               </div>
             </div>
-            <button className="w-full whitespace-nowrap text-white py-2 rounded-3xl mt-5 bg-main">
+            <button className="w-full  lg:w-[305px] py-2 lg:h-[44px] whitespace-nowrap text-white rounded-3xl mt-5 bg-main">
               <p className="font-semibold">Подтвердить</p>
             </button>
           </div>

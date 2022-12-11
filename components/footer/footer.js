@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 
-export default function Footer() {
+export default function Footer({ noMargin }) {
+  const [instaClicked, setInstaClicked] = useState(null);
+  const [telegramClicked, setTelegramClicked] = useState(null);
+
+  function handleClick(type) {
+    if (type == "tele") {
+      setTelegramClicked(true);
+
+      setInstaClicked(false);
+    }
+
+    if (type == "insta") {
+      setInstaClicked(true);
+      setTelegramClicked(false);
+    }
+
+    setTimeout(() => {
+      setInstaClicked(false);
+      setTelegramClicked(false);
+    }, 1500);
+  }
+
   return (
-    <footer className="mt-[80px]">
+    <footer className={`${noMargin ? "mt-0" : "mt-[80px]"}`}>
       <div className="bg-[#181818] w-full lg:h-[259px] flex justify-center items-center ">
         <div className="myContainer text-white py-5 gap-y-5 grid grid-cols-12 gap-x-5">
           <div className="col-span-12 sm:col-span-5 lg:col-span-3 flex flex-col items-start justify-start gap-y-2">
@@ -68,10 +89,24 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex gap-x-5">
-              <div className="hidden hover:bg-white linkHover hover:text-main cursor-pointer lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl text-white">
+              <div
+                onClick={() => handleClick("tele")}
+                className={`${
+                  telegramClicked
+                    ? "linkClicked text-main"
+                    : "hover:bg-white text-white linkHover"
+                } hidden   hover:text-main cursor-pointer lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl `}
+              >
                 <FaTelegramPlane />
               </div>
-              <div className="hidden hover:text-main insta cursor-pointer  lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl text-white">
+              <div
+                onClick={() => handleClick("insta")}
+                className={` ${
+                  instaClicked
+                    ? "linkClicked text-main"
+                    : "hover:bg-white text-white linkHover insta"
+                } hidden cursor-pointer  hover:text-main lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl `}
+              >
                 <BsInstagram />
               </div>
             </div>

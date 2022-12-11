@@ -62,9 +62,9 @@ export default function FilterOptions({ showFilter }) {
     <section
       className={` ${
         showFilter ? "" : "hidden md:flex"
-      } col-span-12 md:col-span-4 lg:col-span-3 flex flex-col mb-10`}
+      } col-span-12 md:col-span-4 lg:col-span-3 flex  flex-col mb-10`}
     >
-      <div className=" bg-[#F0F0F0] w-full py-5  flex justify-center">
+      <div className=" bg-[#F0F0F0] w-full  h-[56px] items-center  flex justify-center">
         <p className="font-medium text-[18px]">Фильтры</p>
       </div>
       {data.map((item, i) => (
@@ -86,7 +86,7 @@ export default function FilterOptions({ showFilter }) {
           <div className="w-full border mt-3 border-[#D0D0D0]"></div>
         </div>
       ))}
-      <div className="flex justify-center mt-5 py-5 w-full border  border-[#898989] rounded-lg">
+      <div className="flex justify-center mt-5 h-[45px]   items-center w-full border  border-[#898989] rounded-lg">
         <p className="text-[#898989]">Сбросить фильтры</p>
       </div>
     </section>

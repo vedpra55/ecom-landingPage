@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Brands() {
   const data = [
@@ -17,15 +17,27 @@ export default function Brands() {
     },
   ];
 
+  const [clicked, setClicked] = useState(null);
+
+  function handleClick(i) {
+    setClicked(i);
+    setTimeout(() => {
+      setClicked(null);
+    }, 2000);
+  }
+
   return (
     <section className="myContainer mt-[50px] md:mt-[70px]">
       <p className=" font-bold text-xl md:text-3xl">
         Брнеды которые мы доставляем
       </p>
       <div className="grid grid-cols-12 gap-5 3xl:gap-x-[27px] mt-5 ">
-        {data.map((item) => (
+        {data.map((item, i) => (
           <div
-            className=" cardHover w-full  cursor-pointer cardShadow 3xl:w-[280px] 3xl:h-[130px] relative col-span-6 md:col-span-3 lg:col-span-3 h-28 md:h-36 bg-white shadow-md rounded-lg"
+            onClick={() => handleClick(i)}
+            className={`${
+              clicked === i ? "cardClicked" : "cardHover"
+            }  w-full  cursor-pointer cardShadow 3xl:w-[280px] 3xl:h-[130px] relative col-span-6 md:col-span-3 lg:col-span-3 h-28 md:h-36 bg-white shadow-md rounded-lg`}
             key={item.imgUrl}
           >
             <Image

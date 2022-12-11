@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { NavBar, Footer } from "../../components";
-import { AiOutlineRight } from "react-icons/ai";
+import { NavBar, Footer, Breadcrumbs } from "../../components";
 import ProfileEdit from "../../pageComponents/account/profileEdit";
 import OrderHistory from "../../pageComponents/account/orderHistory";
 
@@ -22,20 +21,16 @@ export default function AccountPage() {
   return (
     <main>
       <NavBar />
-      <section className="mt-5 mb-20 myContainer">
-        <div className="flex gap-x-5 items-center">
-          <p className="text-main underline">Главная</p>
-          <AiOutlineRight />
-          <p>Хлебные крошки</p>
-        </div>
-        <div className="grid mt-5 grid-cols-12 gap-y-5 md:gap-x-10 items-start">
-          <div className="col-span-12 md:col-span-4 bg-white w-full py-5 rounded-lg myshadow">
+      <section className="mt-5 mb-[30px] myContainer">
+        <Breadcrumbs text={"Хлебные крошки"} />
+        <div className="grid mt-5 grid-cols-12 gap-y-10 md:gap-x-10 3xl:gap-x-28 items-start">
+          <div className="col-span-12 md:col-span-4 3xl:col-span-3 bg-white w-full h-[105px] lg:w-[300px] flex flex-col justify-center rounded-lg myshadow">
             {tabList.map((item, i) => (
               <>
                 <p
                   onClick={() => setSelectedTab(i)}
                   key={i}
-                  className={`px-5 cursor-pointer ${
+                  className={`px-5 text-[20px] cursor-pointer ${
                     i === selectedTab && "font-semibold"
                   }`}
                 >

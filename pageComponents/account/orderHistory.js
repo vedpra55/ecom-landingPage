@@ -67,8 +67,8 @@ export default function OrderHistory() {
   ];
 
   return (
-    <div className="col-span-12 md:col-span-8 w-full">
-      <h2 className="font-bold text-2xl mb-3">История заказов</h2>
+    <div className="col-span-12 md:col-span-8 3xl:col-span-9">
+      <h2 className="font-bold text-2xl mb-[15px]">История заказов</h2>
       <div className="relative">
         <input
           className="accountInput "
@@ -82,7 +82,7 @@ export default function OrderHistory() {
       <div className="hidden md:grid grid-cols-12 gap-x-5 mt-5">
         {header.map((item, i) => (
           <div key={item.name} className={`${i === 5 && "pl-5"}  ${item.col}`}>
-            <p className="text-[10px] lg:text-[13px] whitespace-nowrap font-semibold">
+            <p className="text-[10px] lg:text-[13px] 3xl:text-[16px] whitespace-nowrap font-semibold">
               {item.name}
             </p>
           </div>

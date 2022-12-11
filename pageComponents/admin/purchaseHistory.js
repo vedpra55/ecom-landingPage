@@ -69,19 +69,19 @@ export default function PurchaseHistory() {
   ];
 
   return (
-    <div className="col-span-12 md:col-span-8">
-      <h2 className="font-bold text-2xl mb-3">История заказов</h2>
+    <div className="col-span-12 md:col-span-8 3xl:col-span-9">
+      <h2 className="font-bold text-2xl mb-[15px]">История заказов</h2>
       <div className="relative">
         <input
-          className="accountInput "
+          className="accountInput h-[52px] "
           placeholder="Поиск заказа"
           type="text"
         />
-        <div className="text-xl flex items-center absolute  right-5 bottom-3  text-main ">
+        <div className="text-xl flex items-center absolute  right-5 bottom-4  text-main ">
           <AiOutlineSearch />
         </div>
       </div>
-      <div className="hidden md:grid grid-cols-12 gap-x-2  mt-5">
+      <div className="hidden md:grid grid-cols-12 gap-x-2  mt-[30px]">
         {header.map((item, i) => (
           <div key={i} className={`${i === 2 && "pl-5"}  ${item.col}`}>
             <p className="text-[10px] lg:text-[13px] whitespace font-semibold">

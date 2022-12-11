@@ -32,14 +32,14 @@ export default function AdminPage() {
       <NavBar />
       <section className="mt-5 mb-20 myContainer">
         <Breadcrumbs text="Хлебные крошки" />
-        <div className="grid mt-5 grid-cols-12 gap-y-5 md:gap-x-10 items-start">
-          <div className="col-span-12 md:col-span-4 bg-white w-full py-5 rounded-lg myshadow">
+        <div className="grid mt-[30px] grid-cols-12 gap-y-10 md:gap-x-5 xl:gap-x-0 3xl:gap-x-28 items-start">
+          <div className="col-span-12 md:col-span-4 3xl:col-span-3 bg-white w-full h-[213px] xl:w-[300px] py-[15px] rounded-lg myshadow">
             {tabList.map((item, i) => (
               <>
                 <p
                   onClick={() => setSelectedTab(i)}
                   key={i}
-                  className={`px-5 cursor-pointer ${
+                  className={`px-5 text-[18px] cursor-pointer ${
                     i === selectedTab && "font-semibold"
                   }`}
                 >
