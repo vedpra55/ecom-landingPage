@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { ChartMy } from "./chart";
 
 export default function AdminPanal() {
+  const [clicked, setClicked] = useState(null);
+
+  function handleClick() {
+    setClicked(true);
+
+    setTimeout(() => {
+      setClicked(false);
+    }, 1500);
+  }
+
   return (
     <div className="col-span-12 md:col-span-8 3xl:col-span-9">
       <h2 className="font-bold text-2xl mb-5">Админ панель</h2>
@@ -14,8 +24,13 @@ export default function AdminPanal() {
         <div className="flex items-center gap-x-3">
           <p>c</p>
           <div className="border rounded-3xl px-8 py-2">28.10.2022</div>
-          <button className="w-[170px] h-[50px] rounded-3xl text-white bg-main py-2 px-8">
-            <p>Показать</p>
+          <button
+            onClick={handleClick}
+            className={`${
+              clicked ? "btnClicked" : "btnHover"
+            } w-[170px] h-[50px] rounded-3xl text-white bg-main py-2 px-8`}
+          >
+            Показать
           </button>
         </div>
       </div>
