@@ -1,8 +1,18 @@
-import { NavBar } from "../../components";
+import { Breadcrumbs, NavBar } from "../../components";
 import { AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function BrandsPage() {
+  const [clicked, setClicked] = useState(null);
+
+  function handleClick(i) {
+    setClicked(i);
+    setTimeout(() => {
+      setClicked(null);
+    }, 2000);
+  }
+
   const data = [
     {
       imgUrl: "/assets/brand1.png",
@@ -46,16 +56,15 @@ export default function BrandsPage() {
     <main>
       <NavBar />
       <section className="myContainer mt-5 mb-10">
-        <div className="flex gap-x-5 items-center">
-          <p className="text-main underline">Главная</p>
-          <AiOutlineRight />
-          <p>Хлебные крошки</p>
-        </div>
+        <Breadcrumbs text={"Хлебные крошки"} />
         <h2 className="font-bold text-3xl mt-5">Все бренды</h2>
         <div className="grid grid-cols-12 gap-5 mt-5 ">
-          {data.map((item) => (
+          {data.map((item, i) => (
             <div
-              className="relative w-full col-span-6 md:col-span-3 lg:col-span-3 h-20 md:h-36 bg-white shadow-md rounded-lg"
+              onClick={() => handleClick(i)}
+              className={`${
+                clicked === i ? "cardClicked" : "cardHover"
+              }  w-full  cursor-pointer cardShadow 3xl:w-[280px] 3xl:h-[130px] relative col-span-6 md:col-span-3 lg:col-span-3 h-28 md:h-36 bg-white shadow-md rounded-lg`}
               key={item.imgUrl}
             >
               <Image
