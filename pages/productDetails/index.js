@@ -59,7 +59,17 @@ export default function ProductDetailsPage() {
     },
   ];
 
+  const colors = [
+    "bg-gray-200",
+    "bg-green-500",
+    "bg-orange-500",
+    "bg-black",
+    "bg-lime-400",
+  ];
+
   const [clicked, setClicked] = useState(null);
+  const [selectSize, setSelectedSize] = useState(2);
+  const [selectColor, setSelectedColor] = useState(2);
 
   function handleClick() {
     setClicked(true);
@@ -157,10 +167,11 @@ export default function ProductDetailsPage() {
               <div className="flex gap-x-[10px] gap-y-2 mt-[15px] mr-10 flex-wrap">
                 {Array.from(Array(10)).map((item, i) => (
                   <div
+                    onClick={() => setSelectedSize(i)}
                     key={i}
                     className={`${
-                      i === 2 && "font-bold bg-main text-white"
-                    } border w-[65px] h-[50px] flex justify-center items-center rounded-md`}
+                      i === selectSize && "font-bold bg-main text-white"
+                    } border cursor-pointer w-[65px] h-[50px] flex justify-center items-center rounded-md`}
                   >
                     S
                   </div>
@@ -180,13 +191,22 @@ export default function ProductDetailsPage() {
             <div className="mt-[30px]">
               <p className="font-bold text-xl">Цвет</p>
               <div className="flex gap-x-[15px] mt-[10px] items-center">
-                <div className="rounded-full bg-gray-200 h-[25px] w-[25px]"></div>
-                <div className="rounded-full bg-green-500 h-[25px] w-[25px]"></div>
-                <div className=" text-white rounded-full flex items-center justify-center  border-[10px]  border-opacity-80 border-orange-100 bg-orange-500 h-[50px] w-[50px]">
-                  <BsCheckLg />
-                </div>
-                <div className="rounded-full bg-black h-[25px] w-[25px]"></div>
-                <div className="rounded-full bg-lime-400 h-[25px] w-[25px]"></div>
+                {colors.map((item, i) =>
+                  selectColor === i ? (
+                    <div
+                      key={i}
+                      className={`${item} cursor-pointer text-white rounded-full flex items-center justify-center  border-[10px]  border-opacity-80 border-orange-100  h-[50px] w-[50px]`}
+                    >
+                      <BsCheckLg />
+                    </div>
+                  ) : (
+                    <div
+                      onClick={() => setSelectedColor(i)}
+                      key={i}
+                      className={`${item} ${selectColor} cursor-pointer rounded-full  h-[25px] w-[25px]`}
+                    ></div>
+                  )
+                )}
               </div>
             </div>
             <div className="mt-[30px]">
