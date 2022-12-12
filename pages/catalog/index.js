@@ -161,13 +161,13 @@ export default function CatalogPage() {
             </p>
           </div>
         )}
-        <div className="grid grid-cols-12 gap-x-5 mt-[30px]">
+        <div className="grid grid-cols-12 gap-x-5 mt-4 md:mt-[30px]">
           <FilterOptions showFilter={showFilter} />
           <div className="col-span-12 md:col-span-8 lg:col-span-9">
             <h2 className="text-3xl font-bold">Доступные товары в наличие</h2>
             <div className="flex justify-between md:justify-start md:gap-x-[15px] items-center mt-[15px]">
               <p>Сортировать по:</p>
-              <select className="border w-[270px] h-[45px] rounded-[90px] px-5 border-[#D9D9D9]">
+              <select className="border  py-2 md:w-[270px] md:h-[45px] rounded-[90px] px-3 border-[#D9D9D9]">
                 <option className="">Сначала дешевые</option>
               </select>
             </div>
