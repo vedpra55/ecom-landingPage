@@ -30,7 +30,7 @@ export default function AccountPage() {
                 <p
                   onClick={() => setSelectedTab(i)}
                   key={i}
-                  className={`px-5 text-[20px] cursor-pointer ${
+                  className={`px-5 hover:text-main text-[20px] cursor-pointer ${
                     i === selectedTab && "font-semibold"
                   }`}
                 >

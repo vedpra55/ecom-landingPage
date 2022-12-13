@@ -17,7 +17,8 @@ export default function ProductCard({ product }) {
             alt={product.name}
           />
           <div className=" absolute h-8 inset-0 px-2 py-2 flex justify-between">
-            <div className="flex items-center  gap-x-2 text-[13px]">
+            <div className="flex items-center  gap-x-1 text-[13px]">
+              <div className="rounded-full p-1 bg-[#8CC851]"></div>
               {product.attribute}
             </div>
             <div className="flex items-center">

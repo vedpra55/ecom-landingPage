@@ -86,10 +86,10 @@ export default function ProductDetailsPage() {
                 src={data.imgUrl}
               />
               <div className="absolute px-2 md:px-[30px] inset-0 flex justify-between items-center">
-                <div className="bg-main rounded-full w-[40px] h-[40px] flex justify-center items-center text-white">
+                <div className="bg-main btnHover cursor-pointer rounded-full w-[40px] h-[40px] flex justify-center items-center text-white">
                   <SlArrowLeft className="" />
                 </div>
-                <div className="bg-main rounded-full w-[40px] h-[40px] flex justify-center items-center text-white">
+                <div className="bg-main btnHover cursor-pointer rounded-full w-[40px] h-[40px] flex justify-center items-center text-white">
                   <SlArrowRight className="" />
                 </div>
               </div>
@@ -110,10 +110,10 @@ export default function ProductDetailsPage() {
                 </div>
               ))}
               <div className="absolute text-xs px-2 md:px-[10px] inset-0 flex justify-between items-center">
-                <div className="bg-main rounded-full opacity-40 w-[25px] h-[25px] md:w-[40px] md:h-[40px] flex justify-center items-center text-white">
+                <div className="bg-main btnHover cursor-pointer rounded-full opacity-40 w-[25px] h-[25px] md:w-[40px] md:h-[40px] flex justify-center items-center text-white">
                   <SlArrowLeft className="" />
                 </div>
-                <div className="bg-main rounded-full opacity-40  w-[25px] h-[25px] md:w-[40px] md:h-[40px] flex justify-center items-center text-white">
+                <div className="bg-main btnHover cursor-pointer rounded-full opacity-40  w-[25px] h-[25px] md:w-[40px] md:h-[40px] flex justify-center items-center text-white">
                   <SlArrowRight className="" />
                 </div>
               </div>
