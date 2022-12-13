@@ -72,7 +72,7 @@ export default function Footer({ noMargin }) {
             </div>
             <div className="flex gap-x-5">
               <div
-                className={` text-white linkHover  hidden   hover:text-main cursor-pointer lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl `}
+                className={` text-white linkHover     hover:text-main cursor-pointer flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl `}
               >
                 <FaTelegramPlane />
               </div>
