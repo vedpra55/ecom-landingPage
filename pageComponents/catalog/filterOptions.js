@@ -71,8 +71,8 @@ export default function FilterOptions({ showFilter }) {
       <OptionsList item={data[1]} />
       <OptionsList item={data[3]} />
 
-      <button className="flex justify-center mt-5 h-[45px]   items-center w-full border  border-[#898989] rounded-lg">
-        <p className="text-[#898989]">Сбросить фильтры</p>
+      <button className=" btnHover hover:text-white text-[#898989] flex justify-center mt-5 h-[45px]   items-center w-full border  border-[#898989] rounded-lg">
+        <p className="">Сбросить фильтры</p>
       </button>
     </section>
   );

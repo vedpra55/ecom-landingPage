@@ -5,36 +5,10 @@ import { AiFillStar } from "react-icons/ai";
 import Link from "next/link";
 
 export default function ProductCard({ product }) {
-  const [clicked, setClicked] = useState(null);
-  const [cartClicked, setCartClicked] = useState(null);
-
-  function handleClick(type) {
-    if (type == "card") {
-      setClicked(true);
-      setCartClicked(false);
-    }
-    if (type == "cart") {
-      setClicked(false);
-      setCartClicked(true);
-    }
-
-    setTimeout(() => {
-      setCartClicked(false);
-      setClicked(false);
-    }, 2000);
-  }
-
   return (
-    <div
-      className={`${
-        clicked ? "cardClicked rounded-[10px]" : "cardShadow cardHover "
-      } w-full 3xl:w-[280px]  pb-2`}
-    >
+    <div className={`cardShadow cardHover  w-full 3xl:w-[280px]  pb-2`}>
       <Link href={"/productDetails"}>
-        <div
-          onClick={() => handleClick("card")}
-          className="relative w-full h-[390px] rounded-t-lg"
-        >
+        <div className="relative w-full h-[390px] rounded-t-lg">
           <Image
             fill
             sizes="100vh"
@@ -60,12 +34,7 @@ export default function ProductCard({ product }) {
           <p className=" font-semibold">{product.dicountedPrice}</p>
         </div>
         <button
-          onClick={() => handleClick("cart")}
-          className={`${
-            cartClicked
-              ? "btnClicked text-white"
-              : "hover:bg-main hover:text-white"
-          } border lg:mx-0  2xl:w-[228px] 2xl:h-[44px]    border-main text-main flex justify-center items-center rounded-3xl gap-x-3 md:gap-x-[13px] py-2 px-2 md:px-4`}
+          className={` btnHover hover:text-white border lg:mx-0  2xl:w-[228px] 2xl:h-[44px]    border-main text-main flex justify-center items-center rounded-3xl gap-x-3 md:gap-x-[13px] py-2 px-2 md:px-4`}
         >
           <GiShoppingCart className=" md:text-xl" />
           <p className="text-xs text-[14px] md:text-[15px] whitespace-nowrap">

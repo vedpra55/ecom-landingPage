@@ -67,16 +67,8 @@ export default function ProductDetailsPage() {
     "bg-lime-400",
   ];
 
-  const [clicked, setClicked] = useState(null);
   const [selectSize, setSelectedSize] = useState(2);
   const [selectColor, setSelectedColor] = useState(2);
-
-  function handleClick() {
-    setClicked(true);
-    setTimeout(() => {
-      setClicked(false);
-    }, 1000);
-  }
 
   return (
     <main>
@@ -171,7 +163,7 @@ export default function ProductDetailsPage() {
                     key={i}
                     className={`${
                       i === selectSize && "font-bold bg-main text-white"
-                    } border cursor-pointer w-[65px] h-[50px] flex justify-center items-center rounded-md`}
+                    } border cursor-pointer btnHover hover:text-white w-[65px] h-[50px] flex justify-center items-center rounded-md`}
                   >
                     S
                   </div>
@@ -195,7 +187,7 @@ export default function ProductDetailsPage() {
                   selectColor === i ? (
                     <div
                       key={i}
-                      className={`${item} cursor-pointer text-white rounded-full flex items-center justify-center  border-[10px]  border-opacity-80 border-orange-100  h-[50px] w-[50px]`}
+                      className={`${item}  cursor-pointer text-white rounded-full flex items-center justify-center  border-[10px]  border-opacity-80 border-orange-100  h-[50px] w-[50px]`}
                     >
                       <BsCheckLg />
                     </div>
@@ -203,7 +195,7 @@ export default function ProductDetailsPage() {
                     <div
                       onClick={() => setSelectedColor(i)}
                       key={i}
-                      className={`${item} ${selectColor} cursor-pointer rounded-full  h-[25px] w-[25px]`}
+                      className={`${item} ${selectColor}  cursor-pointer rounded-full  h-[25px] w-[25px]`}
                     ></div>
                   )
                 )}
@@ -211,12 +203,7 @@ export default function ProductDetailsPage() {
             </div>
             <div className="mt-[30px]">
               <button
-                onClick={handleClick}
-                className={`${
-                  clicked
-                    ? "btnClicked text-white"
-                    : "btnHover hover:text-white text-main"
-                }   w-[220px] h-[50px] border border-main  flex justify-center items-center rounded-3xl gap-x-3 md:gap-x-3 py-2  px-5`}
+                className={` btnHover hover:text-white text-main  w-[220px] h-[50px] border border-main  flex justify-center items-center rounded-3xl gap-x-3 md:gap-x-3 py-2  px-5`}
               >
                 <GiShoppingCart className=" md:text-2xl" />
                 <p className=" text-[15px] font-semibold whitespace-nowrap">

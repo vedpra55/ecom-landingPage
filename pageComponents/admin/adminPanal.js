@@ -3,16 +3,6 @@ import React, { useState } from "react";
 import { ChartMy } from "./chart";
 
 export default function AdminPanal() {
-  const [clicked, setClicked] = useState(null);
-
-  function handleClick() {
-    setClicked(true);
-
-    setTimeout(() => {
-      setClicked(false);
-    }, 1500);
-  }
-
   return (
     <div className="col-span-12 md:col-span-8 3xl:col-span-9">
       <h2 className="font-bold text-2xl mb-5">Админ панель</h2>
@@ -25,10 +15,7 @@ export default function AdminPanal() {
           <p>c</p>
           <div className="border rounded-3xl px-8 py-2">28.10.2022</div>
           <button
-            onClick={handleClick}
-            className={`${
-              clicked ? "btnClicked" : "btnHover"
-            } w-[170px] h-[50px] rounded-3xl text-white bg-main py-2 px-8`}
+            className={`btnHover w-[170px] h-[50px] rounded-3xl text-white bg-main py-2 px-8`}
           >
             Показать
           </button>
@@ -38,7 +25,7 @@ export default function AdminPanal() {
         {Array.from(Array(4)).map((item, i) => (
           <div
             key={i}
-            className="3xl:w-[210px] h-[110px] flex flex-col justify-center px-3 md:col-span-3 col-span-6 py-3 text-white adminPanalCard rounded-md shadow-lg"
+            className=" btnHover cursor-pointer 3xl:w-[210px] h-[110px] flex flex-col justify-center px-3 md:col-span-3 col-span-6 py-3 text-white adminPanalCard rounded-md shadow-lg"
           >
             <p className="font-bold text-[14px]">Показатель какой то</p>
             <div className="flex gap-x-3 mt-2 items-end">

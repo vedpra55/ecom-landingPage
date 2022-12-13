@@ -24,7 +24,9 @@ export default function CategoryBar() {
       <div className="w-full h-full flex flex-wrap md:flex-nowrap justify-between gap-x-10 md:gap-0 text-xs md:text-[20px] cursor-pointer  gap-y-1 md:justify-between items-center myContainer">
         {data.map((item) => (
           <div key={item.name}>
-            <p className="text-white hover:text-main">{item.name}</p>
+            <p className="text-white hover:text-main active:text-[#94D9FF]">
+              {item.name}
+            </p>
           </div>
         ))}
       </div>

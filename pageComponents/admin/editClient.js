@@ -1,17 +1,6 @@
 import React, { useState } from "react";
 
 export default function EditClient() {
-  const [clicked, setClicked] = useState(null);
-
-  function handleClick(e) {
-    e.preventDefault();
-    setClicked(true);
-
-    setTimeout(() => {
-      setClicked(null);
-    }, 1500);
-  }
-
   return (
     <div className="col-span-12 md:col-span-8 3xl:col-span-9">
       <h2 className="font-bold text-2xl mb-5">
@@ -49,10 +38,7 @@ export default function EditClient() {
             <p>Пользователь является админом</p>
           </div>
           <button
-            onClick={handleClick}
-            className={`${
-              clicked ? "btnClicked" : "btnHover"
-            } bg-main text-white lg:w-[305px] lg:h-[55px] flex justify-center items-center px-14 py-2 rounded-[90px]`}
+            className={`btnHover bg-main text-white lg:w-[305px] lg:h-[55px] flex justify-center items-center px-14 py-2 rounded-[90px]`}
           >
             Сохранить
           </button>

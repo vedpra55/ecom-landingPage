@@ -14,33 +14,7 @@ import Link from "next/link";
 export default function NavBar() {
   const [isMenu, setMenu] = useState(false);
 
-  const [telegramClicked, setTelegramClicked] = useState(null);
-  const [cartClicked, setCartClicked] = useState(null);
-  const [instaClicked, setInstaClicked] = useState(null);
-
-  function handleClick(type) {
-    if (type == "tele") {
-      setTelegramClicked(true);
-      setCartClicked(false);
-      setInstaClicked(false);
-    }
-    if (type == "cart") {
-      setCartClicked(true);
-      setTelegramClicked(false);
-      setInstaClicked(false);
-    }
-    if (type == "insta") {
-      setInstaClicked(true);
-      setTelegramClicked(false);
-      setCartClicked(false);
-    }
-
-    setTimeout(() => {
-      setInstaClicked(false);
-      setTelegramClicked(false);
-      setCartClicked(false);
-    }, 1500);
-  }
+  const [icon, setIcon] = useState("/insta.png");
 
   return (
     <div>
@@ -120,34 +94,23 @@ export default function NavBar() {
             </div>
           </div>
           <div
-            onClick={() => handleClick("tele")}
-            className={`${
-              telegramClicked
-                ? "linkClicked text-main"
-                : "hover:bg-white text-white linkHover"
-            } hidden   hover:text-main cursor-pointer lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl `}
+            className={` text-white linkHover  hidden   hover:text-main cursor-pointer lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl `}
           >
             <FaTelegramPlane />
           </div>
           <div
-            onClick={() => handleClick("insta")}
-            className={` ${
-              instaClicked
-                ? "linkClicked text-main"
-                : "hover:bg-white text-white linkHover insta"
-            } hidden cursor-pointer  hover:text-main lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl `}
+            className="hidden md:block cursor-pointer"
+            onMouseDown={() => setIcon("/instaActive.png")}
+            onMouseUp={() => setIcon("/insta.png")}
+            onMouseLeave={() => setIcon("/insta.png")}
+            onMouseEnter={() => setIcon("/instaHover.png")}
           >
-            <BsInstagram />
+            <img className="w-[50px] h-[50px] " src={icon} alt="insta" />
           </div>
           <Link href={"/cart"}>
             <div className="hidden   md:flex items-center gap-x-2">
               <div
-                onClick={() => handleClick("cart")}
-                className={`${
-                  cartClicked
-                    ? "linkClicked text-main"
-                    : "hover:bg-white text-white linkHover"
-                } hidden   hover:text-main cursor-pointer lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl `}
+                className={` text-white linkHover hidden   hover:text-main cursor-pointer lg:flex justify-center items-center w-[50px] h-[50px]  bg-[#039BE5] rounded-full  text-3xl `}
               >
                 <BsCart4 />
               </div>

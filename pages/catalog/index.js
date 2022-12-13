@@ -5,12 +5,16 @@ import {
   ProductCard,
   Breadcrumbs,
 } from "../../components";
+import { GiShoppingCart } from "react-icons/gi";
 import FilterOptions from "../../pageComponents/catalog/filterOptions";
-import { AiOutlineRight, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
+import Modal from "../../components/Modal/modal";
 
 export default function CatalogPage() {
   const [showFilter, setShowFilter] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectSize, setSelectedSize] = useState(2);
 
   const data = [
     {
@@ -150,6 +154,9 @@ export default function CatalogPage() {
       <NavBar />
       <section className="myContainer mt-[20px]">
         <Breadcrumbs text={"Хлебные крошки"} />
+        <p onClick={() => setIsOpen(true)} className=" cursor-pointer">
+          Open Modal
+        </p>
         {showFilter ? (
           <div className="md:hidden mt-4">
             <AiOutlineClose onClick={() => setShowFilter(false)} />
@@ -191,6 +198,36 @@ export default function CatalogPage() {
           </div>
         </div>
       </section>
+      <Modal setIsOpen={setIsOpen} isOpen={isOpen}>
+        <div className=" w-[350px] h-full md:w-[540px] md:h-[325px] rounded-[20px] bg-white py-5 md:py-[50px] px-5 md:px-[30px]">
+          <div className="flex justify-center ">
+            <p className="text-[32px]  font-bold">Выберите размер</p>
+          </div>
+          <div className="flex items-center justify-center mt-[30px] gap-x-[20px]">
+            {Array.from(Array(5)).map((item, i) => (
+              <div
+                onClick={() => setSelectedSize(i)}
+                key={i}
+                className={`${
+                  i === selectSize && "font-bold bg-main text-white"
+                } border cursor-pointer btnHover hover:text-white w-[50px] h-[50px] md:w-[81px] md:h-[81px] flex justify-center items-center rounded-md`}
+              >
+                S
+              </div>
+            ))}
+          </div>
+          <div className=" mt-[30px] flex justify-center">
+            <button
+              className={` btnHover hover:text-white text-main  w-[220px] h-[50px] border border-main  flex justify-center items-center rounded-3xl gap-x-3 md:gap-x-3 py-2  px-5`}
+            >
+              <GiShoppingCart className=" md:text-2xl" />
+              <p className=" text-[15px] font-semibold whitespace-nowrap">
+                Добавить в корзину
+              </p>
+            </button>
+          </div>
+        </div>
+      </Modal>
       <ContactUs />
       <Footer noMargin={true} />
     </main>

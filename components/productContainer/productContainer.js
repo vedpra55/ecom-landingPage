@@ -45,7 +45,7 @@ export default function ProductContainer({ products, title }) {
           {title}
         </h5>
         <Link href={"/catalog"}>
-          <p className="text-main underline font-medium whitespace-nowrap">
+          <p className="text-main hover:text-[#94D9FF]  underline font-medium whitespace-nowrap">
             Перейти в каталог
           </p>
         </Link>

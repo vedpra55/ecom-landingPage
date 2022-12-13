@@ -20,10 +20,10 @@ export default function ClientItemTable({ item }) {
           </p>
         </div>
         <div className="col-span-4 flex gap-x-2">
-          <p className="text-[10px] md:w-[120px] md:h-[35px] flex items-center justify-center bg-main text-white rounded-[90px] px-5 py-1 lg:text-[13px] whitespace-nowrap">
+          <p className="text-[10px] btnHover cursor-pointer md:w-[120px] md:h-[35px] flex items-center justify-center bg-main text-white rounded-[90px] px-5 py-1 lg:text-[13px] whitespace-nowrap">
             Действие
           </p>
-          <p className="text-[10px] md:w-[120px] nd:h-[35px] flex items-center justify-center bg-main text-white rounded-[90px] px-5 py-1 lg:text-[13px] whitespace-nowrap">
+          <p className="text-[10px] btnHover cursor-pointer md:w-[120px] nd:h-[35px] flex items-center justify-center bg-main text-white rounded-[90px] px-5 py-1 lg:text-[13px] whitespace-nowrap">
             Действие
           </p>
         </div>

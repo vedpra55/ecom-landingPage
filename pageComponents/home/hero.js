@@ -1,10 +1,12 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 import { BsPlayFill } from "react-icons/bs";
 import { AiOutlineRight } from "react-icons/ai";
 
 export default function Hero() {
+  const [buttonHover, setHover] = useState(false);
+
   return (
     <section className="w-full h-full ">
       <div className=" bg-black opacity-95 bg-hero-pattern bg-no-repeat w-full h-full md:h-[450px] xl:h-[480px] 2xl:h-[600px] bg-cover">
@@ -43,7 +45,7 @@ export default function Hero() {
                 <AiOutlineRight />
               </div>
             </div>
-            <button className="border  lg:w-[289px] lg:h-[52px] border-main text-white px-10 mt-4 py-2 rounded-[90px]">
+            <button className="border btnHover  lg:w-[289px] lg:h-[52px] border-main text-white px-10 mt-4 py-2 rounded-[90px]">
               <p className=" font-medium whitespace-nowrap ">
                 Рассчитатьс стоимость
               </p>
@@ -58,9 +60,17 @@ export default function Hero() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco
             </p>
-            <button className="lg:w-[340px] lg:h-[65px] flex justify-center items-center px-14 py-2 border border-main rounded-[90px]">
+            <button
+              onMouseLeave={() => setHover(false)}
+              onMouseEnter={() => setHover(true)}
+              className=" btnHover lg:w-[340px] lg:h-[65px] flex justify-center items-center px-14 py-2 border border-main rounded-[90px]"
+            >
               <div className="flex gap-x-5 items-start">
-                <div className="bg-[#039BE5] text-[14px] rounded-full p-2  text-white">
+                <div
+                  className={` ${
+                    buttonHover ? "bg-white text-main" : "bg-[#039BE5]"
+                  }  text-[14px] rounded-full p-2`}
+                >
                   <FaTelegramPlane />
                 </div>
                 <p className="text-[15px] font-medium whitespace-nowrap">

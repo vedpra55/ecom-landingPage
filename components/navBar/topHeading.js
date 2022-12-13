@@ -29,7 +29,9 @@ export default function TopHeading() {
               <div className="w-[24px] h-[24px] flex justify-center items-center bg-[#636679] text-white rounded-full text-xs lg:text-[14px]">
                 {item.icon}
               </div>
-              <p>{item.name}</p>
+              <p className=" cursor-pointer hover:text-[#039BE5;] hover:underline">
+                {item.name}
+              </p>
             </div>
           ))}
         </div>
