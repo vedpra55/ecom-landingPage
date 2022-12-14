@@ -41,7 +41,7 @@ export default function Hero() {
                   </div>
                 </div>
               ))}
-              <div className="border border-main text-main rounded-full p-2">
+              <div className="border btnHover hover:text-white cursor-pointer border-main text-main rounded-full p-2">
                 <AiOutlineRight />
               </div>
             </div>

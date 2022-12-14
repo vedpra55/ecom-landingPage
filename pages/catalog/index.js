@@ -209,7 +209,7 @@ export default function CatalogPage() {
                 onClick={() => setSelectedSize(i)}
                 key={i}
                 className={`${
-                  i === selectSize && "font-bold bg-main text-white"
+                  i === selectSize && "font-bold bg-[#0f6ea4] text-white"
                 } border cursor-pointer btnHover hover:text-white w-[50px] h-[50px] md:w-[81px] md:h-[81px] flex justify-center items-center rounded-md`}
               >
                 S
