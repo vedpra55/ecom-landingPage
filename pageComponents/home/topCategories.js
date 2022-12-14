@@ -58,7 +58,7 @@ export default function TopCategories() {
               <p className=" opacity-60 text-[13px] md:text-[18px]">
                 {item.price}
               </p>
-              <button className="btnHover lg:w-[172px] lg:h-[44px] flex justify-center items-center bg-main rounded-[90px]   md:w-auto text-[15px] md:text-[16px] px-5 py-1  font-semibold  whitespace-nowrap lg:px-[52px]">
+              <button className="btnHover hover:bg-red-600 lg:w-[172px] lg:h-[44px] flex justify-center items-center bg-main rounded-[90px]   md:w-auto text-[15px] md:text-[16px] px-5 py-1  font-semibold  whitespace-nowrap lg:px-[52px]">
                 В каталог
               </button>
             </div>
