@@ -15,12 +15,12 @@ export default function AllBrandsPage() {
             {Array.from(Array(12)).map((item, i) => (
               <div
                 key={i}
-                className="col-span-12 md:col-span-6 px-[30px] h-[60px] w-full 3xl:w-[580px] flex justify-between items-center myshadow bg-white rounded-[5px]"
+                className=" cardHover cursor-pointer col-span-12 md:col-span-6 px-[30px] h-[60px] w-full 3xl:w-[580px] flex justify-between items-center myshadow bg-white rounded-[5px]"
               >
                 <p className="font-medium text-[18px]">
                   Часто задаваемые вопросы ?
                 </p>
-                <div className="bg-main rounded-full  w-[24px] h-[24px] flex justify-center items-center">
+                <div className="bg-main btnHover cursor-pointer rounded-full  w-[24px] h-[24px] flex justify-center items-center">
                   <AiOutlinePlus className="text-xl text-white" />
                 </div>
               </div>

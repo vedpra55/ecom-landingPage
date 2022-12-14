@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import TopHeading from "./topHeading";
 import CategoryBar from "./categoryBar";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export default function NavBar() {
   const [isMenu, setMenu] = useState(false);
-
+  const inputRef = useRef();
   const [icon, setIcon] = useState("/insta.png");
 
   return (
@@ -76,11 +76,15 @@ export default function NavBar() {
           </Link>
           <div className="relative">
             <input
+              ref={inputRef}
               className="rounded-[90px] flex items-center w-[150px] md:w-[336px] md:h-[52px] border px-[30px] py-2 md:py-[18px]  outline-[#D9D9D9] border-[#D9D9D9] placeholder:text-black"
               type="text"
               placeholder="Поиск товара"
             />
-            <div className="text-xl flex items-center absolute inset-0 left-[18rem] text-main ">
+            <div
+              onClick={() => inputRef.current.focus()}
+              className="text-xl cursor-pointer flex items-center absolute inset-0 left-[18rem] text-main "
+            >
               <AiOutlineSearch />
             </div>
           </div>

@@ -1,18 +1,7 @@
 import { Breadcrumbs, NavBar } from "../../components";
-import { AiOutlineRight } from "react-icons/ai";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function BrandsPage() {
-  const [clicked, setClicked] = useState(null);
-
-  function handleClick(i) {
-    setClicked(i);
-    setTimeout(() => {
-      setClicked(null);
-    }, 2000);
-  }
-
   const data = [
     {
       imgUrl: "/assets/brand1.png",
@@ -61,10 +50,7 @@ export default function BrandsPage() {
         <div className="grid grid-cols-12 gap-5 mt-5 ">
           {data.map((item, i) => (
             <div
-              onClick={() => handleClick(i)}
-              className={`${
-                clicked === i ? "cardClicked" : "cardHover"
-              }  w-full  cursor-pointer cardShadow 3xl:w-[280px] 3xl:h-[130px] relative col-span-6 md:col-span-3 lg:col-span-3 h-28 md:h-36 bg-white shadow-md rounded-lg`}
+              className={`cardHover  w-full  cursor-pointer cardShadow 3xl:w-[280px] 3xl:h-[130px] relative col-span-6 md:col-span-3 lg:col-span-3 h-28 md:h-36 bg-white shadow-md rounded-lg`}
               key={item.imgUrl}
             >
               <Image

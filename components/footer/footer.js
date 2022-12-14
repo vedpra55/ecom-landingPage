@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import { MdEmail } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
 
 export default function Footer({ noMargin }) {

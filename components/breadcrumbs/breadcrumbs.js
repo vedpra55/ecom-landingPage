@@ -9,7 +9,9 @@ export default function Breadcrumbs({ text }) {
         <p className="text-main cursor-pointer underline">Главная</p>
       </Link>
       <AiOutlineRight />
-      <p className="hover:text-main cursor-pointer">{text}</p>
+      <p className="hover:text-main cursor-pointer active:text-[#94D9FF]">
+        {text}
+      </p>
     </div>
   );
 }
