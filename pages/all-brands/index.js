@@ -36,7 +36,10 @@ function Card() {
   const [isOpen, setOpen] = useState(false);
   return (
     <div className="col-span-12  flex flex-col md:col-span-6">
-      <div className=" cardHover cursor-pointer  px-5 md:px-[30px] h-[60px] w-full 3xl:w-[580px] flex justify-between items-center myshadow bg-white rounded-[5px]">
+      <div
+        onClick={() => setOpen(!isOpen)}
+        className=" cardHover cursor-pointer  px-5 md:px-[30px] h-[60px] w-full 3xl:w-[580px] flex justify-between items-center myshadow bg-white rounded-[5px]"
+      >
         <p className="font-medium md:text-[18px]">Часто задаваемые вопросы ?</p>
 
         {isOpen ? (

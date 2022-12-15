@@ -67,9 +67,9 @@ export default function FilterOptions({ showFilter }) {
       <div className=" bg-[#F0F0F0] w-full  h-[56px] items-center  flex justify-center">
         <p className="font-medium text-[18px]">Фильтры</p>
       </div>
-      <OptionsList item={data[0]} />
-      <OptionsList item={data[1]} />
-      <OptionsList item={data[3]} />
+      {data.map((item, i) => (
+        <OptionsList key={i} item={item} />
+      ))}
 
       <button className=" btnHover hover:text-white text-[#898989] flex justify-center mt-5 h-[45px]   items-center w-full border  border-[#898989] rounded-lg">
         <p className="">Сбросить фильтры</p>
